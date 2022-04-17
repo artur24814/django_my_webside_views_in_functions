@@ -1,0 +1,20 @@
+{% extends "moja_strona/index.html" %}
+{% block title %}Opinions{% endblock%}
+{% block title1 %}Opinions{% endblock%}
+
+{% block content %}<br>
+<p>
+<ul>
+    {% for item in items %}
+    <li>
+        {{ item.name }}  <br>
+        {{ item.opinion }}<br>
+        {{ item.data }}
+    </li>
+    {% endfor %}
+
+</ul>
+<a href="/create_opinion">leave your opinion</a>
+</p>
+
+{% endblock %}

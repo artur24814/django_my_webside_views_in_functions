@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}main page{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css'%}">
+</head>
+<body>
+    <div class="content-top"></div>
+    <div class="content">
+        <h1 class="content-title">{% block title1 %}Artur Yurchenko art{% endblock %}</h1>
+
+        <p>
+        My name is Artur Yurchenko and woodcarving is my hobby and passion. I create artistic things since childhood, I invite you to see my artistic creations. On this page you can also leave your opinion and possibly make an individual order.
+        </p>
+
+        <a href="/" class="btn">Home page</a>
+        <a href="/work/" class="btn">watch all works</a>
+        <a href="/order/" class="btn" target="_blank">make your order</a>
+        <a href="/opinion/" class="btn">opinions</a><br>
+
+
+        {% block content %}<br>
+        <div class="gallery">
+            <h2 class="gallery-title">gallery</h2><br>
+            <div class="gallery-content">
+                {% load static %}
+                <a href="#" class="gallery-link"><img src="{% static 'photo1.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'IMG_2044.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'Tekstura-chernogo-dereva3.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'photo4-1.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'photo1.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'IMG_2044.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'Tekstura-chernogo-dereva3.jpg'%}" width="300" height="200"></a>
+                <a href="#" class="gallery-link"><img src="{% static 'photo4-1.jpg'%}" width="300" height="200"></a>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+    <div class="content-bottom"></div>
+</body>
+</html>

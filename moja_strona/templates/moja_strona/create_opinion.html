@@ -1,0 +1,10 @@
+{% extends "moja_strona/index.html" %}
+{% block title %}Your Opinion{% endblock%}
+{% block title1 %}Your Opinion{% endblock%}
+
+{% block content %}<br>
+<form method="post"> {% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value='Save'/>
+</form>
+{% endblock %}
